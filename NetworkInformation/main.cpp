@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 #include <sstream>
@@ -87,20 +87,20 @@ public:
     }
 
     void printNetworkInfo() {
-        std::cout << "=== Èíôîðìàöèÿ î ñåòè ===" << std::endl;
-        std::cout << "IP-àäðåñ: " << uintToString(ip) << std::endl;
-        std::cout << "Ìàñêà ñåòè: " << uintToString(mask) << " (/" << prefix << ")" << std::endl;
-        std::cout << "Àäðåñ ñåòè: " << uintToString(getNetworkAddress()) << std::endl;
-        std::cout << "Øèðîêîâåùàòåëüíûé àäðåñ: " << uintToString(getBroadcastAddress()) << std::endl;
-        std::cout << "Ïåðâûé äîñòóïíûé IP: " << uintToString(getFirstHost()) << std::endl;
-        std::cout << "Ïîñëåäíèé äîñòóïíûé IP: " << uintToString(getLastHost()) << std::endl;
-        std::cout << "Âñåãî IP-àäðåñîâ: " << getTotalIPs() << std::endl;
-        std::cout << "Äîñòóïíî óçëîâ: " << getHostCount() << std::endl;
+        std::cout << "=== Ð˜Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¾ ÑÐµÑ‚Ð¸ ===" << std::endl;
+        std::cout << "IP-Ð°Ð´Ñ€ÐµÑ: " << uintToString(ip) << std::endl;
+        std::cout << "ÐœÐ°ÑÐºÐ° ÑÐµÑ‚Ð¸: " << uintToString(mask) << " (/" << prefix << ")" << std::endl;
+        std::cout << "ÐÐ´Ñ€ÐµÑ ÑÐµÑ‚Ð¸: " << uintToString(getNetworkAddress()) << std::endl;
+        std::cout << "Ð¨Ð¸Ñ€Ð¾ÐºÐ¾Ð²ÐµÑ‰Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¹ Ð°Ð´Ñ€ÐµÑ: " << uintToString(getBroadcastAddress()) << std::endl;
+        std::cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ñ‹Ð¹ IP: " << uintToString(getFirstHost()) << std::endl;
+        std::cout << "ÐŸÐ¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ñ‹Ð¹ IP: " << uintToString(getLastHost()) << std::endl;
+        std::cout << "Ð’ÑÐµÐ³Ð¾ IP-Ð°Ð´Ñ€ÐµÑÐ¾Ð²: " << getTotalIPs() << std::endl;
+        std::cout << "Ð”Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾ ÑƒÐ·Ð»Ð¾Ð²: " << getHostCount() << std::endl;
 
-        std::cout << "\n=== Áèíàðíîå ïðåäñòàâëåíèå ===" << std::endl;
-        std::cout << "IP-àäðåñ:    " << std::bitset<32>(ip) << std::endl;
-        std::cout << "Ìàñêà:       " << std::bitset<32>(mask) << std::endl;
-        std::cout << "Ñåòü:        " << std::bitset<32>(getNetworkAddress()) << std::endl;
+        std::cout << "\n=== Ð‘Ð¸Ð½Ð°Ñ€Ð½Ð¾Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ===" << std::endl;
+        std::cout << "IP-Ð°Ð´Ñ€ÐµÑ:    " << std::bitset<32>(ip) << std::endl;
+        std::cout << "ÐœÐ°ÑÐºÐ°:       " << std::bitset<32>(mask) << std::endl;
+        std::cout << "Ð¡ÐµÑ‚ÑŒ:        " << std::bitset<32>(getNetworkAddress()) << std::endl;
     }
 };
 
@@ -109,13 +109,13 @@ int main() {
 
     std::string ip, mask;
 
-    std::cout << "Êàëüêóëÿòîð ñåòåé IPv4" << std::endl;
+    std::cout << "ÐšÐ°Ð»ÑŒÐºÑƒÐ»ÑÑ‚Ð¾Ñ€ ÑÐµÑ‚ÐµÐ¹ IPv4" << std::endl;
     std::cout << "======================" << std::endl;
 
-    std::cout << "Ââåäèòå IP-àäðåñ (ôîðìàò: 192.168.1.1): ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ IP-Ð°Ð´Ñ€ÐµÑ (Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚: 192.168.1.1): ";
     std::cin >> ip;
 
-    std::cout << "Ââåäèòå ìàñêó (ôîðìàò: 255.255.255.0 èëè 24): ";
+    std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°ÑÐºÑƒ (Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚: 255.255.255.0 Ð¸Ð»Ð¸ 24): ";
     std::cin >> mask;
 
     try {
@@ -123,7 +123,7 @@ int main() {
         calculator.printNetworkInfo();
     }
     catch (const std::exception& e) {
-        std::cerr << "Îøèáêà: Íåâåðíûé ôîðìàò ââîäà!" << std::endl;
+        std::cerr << "ÐžÑˆÐ¸Ð±ÐºÐ°: ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚ Ð²Ð²Ð¾Ð´Ð°!" << std::endl;
         return 1;
     }
 
